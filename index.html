@@ -3,163 +3,250 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bharath Teja | Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
+<title>Bharath Teja | Avada Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+body{background:#1b1e23;color:#fff;overflow-x:hidden;}
+
+/* HEADER */
+header{position:fixed;top:0;width:100%;background:rgba(20,20,20,0.85);
+backdrop-filter:blur(8px);padding:20px 50px;display:flex;
+justify-content:space-between;z-index:1000;}
+nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
+
+.hero{height:100vh;display:flex;align-items:center;justify-content:space-between;padding:0 60px;}
+.hero-text h1{font-size:50px;line-height:1.2;}
+.hero-text span{color:#ffbf00;}
+.hero img{width:420px;border-radius:15px;box-shadow:0 0 20px #000;}
+
+.shape{position:absolute;border-radius:50%;background:#ffbf0033;filter:blur(50px);} 
+.s1{width:300px;height:300px;top:10%;left:-5%;}
+.s2{width:250px;height:250px;bottom:5%;right:-5%;}
+
+.section{padding:100px 60px;}
+.section-title{font-size:32px;margin-bottom:10px;}
+.line{width:60px;height:4px;background:#ffbf00;margin-bottom:30px;}
+
+.fade{opacity:0;transform:translateY(30px);transition:1s;}
+.fade.visible{opacity:1;transform:translateY(0);}
+
+/* ⭐ 3D CERTIFICATION CARDS */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.cert-card{
+  background:#262a31;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  transition:transform .4s ease, box-shadow .4s ease;
+  transform-style:preserve-3d;
+  cursor:pointer;
+}
+
+.cert-card:hover{
+  transform:rotateY(10deg) rotateX(8deg) scale(1.03);
+  box-shadow:0 25px 60px rgba(0,0,0,0.5);
+}
+
+.cert-card img{
+  width:110px;
+  height:110px;
+  object-fit:contain;
+  margin-bottom:15px;
+}
+
+.cert-card h3{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.cert-card p{
+  font-size:14px;
+  opacity:.7;
+}
+
+/* MODAL POPUP */
+.modal{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,.8);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+}
+
+.modal-content{
+  background:#262a31;
+  padding:30px;
+  border-radius:15px;
+  max-width:500px;
+  width:90%;
+  text-align:center;
+}
+
+.modal-content h2{margin-bottom:10px;}
+.modal-content p{opacity:.8;margin-bottom:20px;}
+
+.close-btn{
+  background:#ffbf00;
+  padding:10px 20px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+}
+.close-btn:hover{
+  background:#e6a900;
+}
+</style>
 </head>
 
 <body>
 
-<!-- Background shapes -->
 <div class="shape s1"></div>
 <div class="shape s2"></div>
 
-<!-- Header -->
 <header>
-  <div class="logo">BT</div>
+  <div style="font-size:22px;font-weight:700;">BT</div>
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
+    <a href="#certs">Certifications</a>
     <a href="#experience">Experience</a>
-    <a href="#testimonial">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- Hero -->
-<section class="hero fade">
+<section class="hero fade" id="home">
   <div class="hero-text">
-    <h1>I’M <span>Bharath Teja</span></h1>
-    <p class="role">Senior Full-Stack / Android Developer</p>
+    <h1>I'M <span>Bharath Teja</span></h1>
+    <p style="font-size:20px;opacity:.8;margin-top:10px;">Senior Full Stack Java Developer</p>
 
-    <a href="#contact" class="btn-outline">Contact Me</a>
+    <a href="#contact"
+       style="margin-top:20px;display:inline-block;padding:10px 22px;border:2px solid #ffbf00;color:#ffbf00;border-radius:6px;text-decoration:none;font-weight:500;">
+       Contact Me
+    </a>
   </div>
 
-  <img src="https://avatars.githubusercontent.com/u/80447449" class="hero-img" alt="profile">
+  <img src="https://avatars.githubusercontent.com/u/80447449?v=4" alt="Bharath">
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section fade">
-  <h2 class="section-title">About Me</h2>
-  <div class="line"></div>
-
-  <p>
-    Experienced Senior Full Stack Java Developer and Android Developer specialized in
-    microservices, cloud-native architectures, and enterprise-grade mobile solutions.
-  </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section fade">
-  <h2 class="section-title">Skills</h2>
-  <div class="line"></div>
-
-  <div class="grid">
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"><p>Java</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"><p>Spring Boot</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"><p>Angular</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><p>React</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"><p>PostgreSQL</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"><p>MongoDB</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"><p>Kafka</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"><p>AWS</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"><p>Azure</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><p>Docker</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"><p>Kubernetes</p></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"><p>Jenkins</p></div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS PORTFOLIO -->
-<section id="certifications" class="section fade">
+<!-- 🌟 CERTIFICATIONS (3D CARDS) -->
+<section id="certs" class="section fade">
   <h2 class="section-title">Certifications</h2>
   <div class="line"></div>
 
-  <div class="portfolio-grid">
+  <div class="cert-grid">
 
-    <!-- Badge 1 -->
-    <div class="badge-card">
-      <img src="https://images.credly.com/size/340x340/images/8dfc9e83-4e05-4fde-b9f6-67f63e1ed5b5/image.png">
-      <h3>Oracle Java SE 17 Developer</h3>
-      <p>Advanced Java programming certification.</p>
-      <button class="view-btn">See More</button>
+    <!-- CARD 1 -->
+    <div class="cert-card" onclick="openModal(0)">
+      <img src="https://miro.medium.com/1*xDeALYUHJdwtI9oBN-nuqg.png"/>
+      <h3>AWS Solutions Architect – Associate</h3>
+      <p>Designed scalable, secure AWS cloud architectures.</p>
     </div>
 
-    <!-- Badge 2 -->
-    <div class="badge-card">
-      <img src="https://www.datocms-assets.com/2885/1713319236-resize_certified_associate-1.png">
-      <h3>Terraform Certified Associate</h3>
-      <p>Infrastructure automation with IaC.</p>
-      <button class="view-btn">See More</button>
+    <!-- CARD 2 -->
+    <div class="cert-card" onclick="openModal(1)">
+      <img src="https://www.datocms-assets.com/2885/1713319236-resize_certified_associate-1.png"/>
+      <h3>Terraform Associate</h3>
+      <p>Infrastructure as Code expert in multi-cloud automation.</p>
     </div>
 
-    <!-- Badge 3 -->
-    <div class="badge-card">
-      <img src="https://d1.awsstatic.com/certification/badges/AWS-Certified-Solutions-Architect-Associate_badge_300x300.c528e1bb85c94be63e7f239446f804c1f5f6d95a.png">
-      <h3>AWS Solutions Architect</h3>
-      <p>Cloud architecture, scaling & design.</p>
-      <button class="view-btn">See More</button>
+    <!-- CARD 3 -->
+    <div class="cert-card" onclick="openModal(2)">
+      <img src="https://miro.medium.com/1*meNIM7ngmoZwdzGXrtn-8g.jpeg"/>
+      <h3>Azure Developer Associate</h3>
+      <p>Azure cloud-native app development & automation.</p>
     </div>
 
-    <!-- Badge 4 -->
-    <div class="badge-card">
-      <img src="https://images.credly.com/size/340x340/images/e7e0f1b8-dac5-48f8-8a6b-964fba2f4b36/azure-ai-fundamentals-600x600.png">
-      <h3>Azure AI Fundamentals</h3>
-      <p>AI/ML fundamentals & Azure services.</p>
-      <button class="view-btn">See More</button>
+    <!-- CARD 4 -->
+    <div class="cert-card" onclick="openModal(3)">
+      <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png"/>
+      <h3>Java SE 11 Developer</h3>
+      <p>Strong understanding of modern Java, OOP, Streams.</p>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="cert-card" onclick="openModal(4)">
+      <img src="https://cdn.worldvectorlogo.com/logos/kubernetes-icon.svg"/>
+      <h3>Kubernetes CKA</h3>
+      <p>Cluster deployment, troubleshooting, HA microservices.</p>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="cert-card" onclick="openModal(5)">
+      <img src="https://www.pngall.com/wp-content/uploads/13/Google-Cloud-Logo-PNG-Image-HD.png"/>
+      <h3>GCP Cloud Architect</h3>
+      <p>Scalable solutions using GKE, GCE, Pub/Sub, BigQuery.</p>
     </div>
 
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="section fade">
-  <h2 class="section-title">Experience</h2>
-  <div class="line"></div>
-
-  <div class="timeline">
-    <div class="item">
-      <span class="year-tag">2023</span>
-      <div class="tl-card">
-        <h3>Senior Developer – Southwest Airlines</h3>
-        <p>Enterprise microservices, AWS migration.</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <span class="year-tag">2021</span>
-      <div class="tl-card">
-        <h3>Lead Android Developer – Sirius XM</h3>
-        <p>Jetpack Compose, MVI, Search module.</p>
-      </div>
-    </div>
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2 id="modal-title"></h2>
+    <p id="modal-text"></p>
+    <button class="close-btn" onclick="closeModal()">Close</button>
   </div>
-</section>
+</div>
 
-<!-- TESTIMONIAL -->
-<section id="testimonial" class="section fade">
-  <h2 class="section-title">Testimonials</h2>
-  <div class="line"></div>
+<script>
+/* fade-in observer */
+const fades=document.querySelectorAll('.fade');
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.2});
+fades.forEach(f=>obs.observe(f));
 
-  <div class="testimonial">
-    <p>“Bharath delivers enterprise-grade software with precision and consistency.”</p>
-    <p><strong>Josef Sharma</strong><br>CEO, Omtech</p>
-  </div>
-</section>
+/* modal data */
+const certData=[
+  {
+    title:"AWS Solutions Architect – Associate",
+    text:"Architect and deploy secure, scalable, high-availability AWS systems using EC2, Lambda, VPC, DynamoDB and cost-optimization best practices."
+  },
+  {
+    title:"HashiCorp Terraform Associate",
+    text:"Build reusable IaC, manage state, automate cloud deployments, and implement scalable multi-cloud provisioning."
+  },
+  {
+    title:"Azure Developer Associate",
+    text:"Azure Functions, App Services, AKS, ARM templates, CI/CD automation and secure API integrations."
+  },
+  {
+    title:"Java SE 11 Developer",
+    text:"Mastery of OOP, Collections, Streams, Lambdas, Generics, Concurrency and modular application design."
+  },
+  {
+    title:"Kubernetes CKA Certification",
+    text:"Deploy and manage Kubernetes clusters, troubleshoot workloads, implement RBAC, networking, storage, Helm."
+  },
+  {
+    title:"GCP Professional Cloud Architect",
+    text:"Design scalable solutions using GKE, BigQuery, Compute Engine, Cloud SQL, and Google’s best practices."
+  }
+];
 
-<!-- CONTACT -->
-<section id="contact" class="section fade">
-  <h2 class="section-title">Contact</h2>
-  <div class="line"></div>
+/* open modal */
+function openModal(i){
+  document.getElementById("modal-title").innerText = certData[i].title;
+  document.getElementById("modal-text").innerText = certData[i].text;
+  document.getElementById("modal").style.display="flex";
+}
 
-  <div class="contact-box">📧 bharath.teja280@gmail.com</div>
-  <div class="contact-box">📍 USA</div>
-</section>
+/* close modal */
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+}
+</script>
 
-<footer>Thanks for Scrolling 😊</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
