@@ -1,69 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bharath Teja | Senior Full Stack Java Developer</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharath Teja | Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <div class="glass-card intro">
-      <img src="https://i.ibb.co/7QpKsCX/default-profile.jpg" class="profile-pic" />
-      <h1>Bharath Teja</h1>
-      <h2>Senior Full Stack Java Developer</h2>
-      <p>
-        Experienced Full Stack Java Developer with strong expertise in building scalable, secure, and high-performance applications across banking, retail, and enterprise industries.
-      </p>
-      <div class="socials">
-        <a href="mailto:bharath.teja280@gmail.com">Email</a>
-        <a href="#">LinkedIn</a>
-        <a href="https://github.com/steja578/steja578.github.io">GitHub</a>
+
+<!-- Background shapes -->
+<div class="shape s1"></div>
+<div class="shape s2"></div>
+
+<!-- Header -->
+<header>
+  <div class="logo">BT</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#experience">Experience</a>
+    <a href="#testimonial">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero fade">
+  <div class="hero-text">
+    <h1>I’M <span>Bharath Teja</span></h1>
+    <p class="role">Senior Full-Stack / Android Developer</p>
+
+    <a href="#contact" class="btn-outline">Contact Me</a>
+  </div>
+
+  <img src="https://avatars.githubusercontent.com/u/80447449" class="hero-img" alt="profile">
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section fade">
+  <h2 class="section-title">About Me</h2>
+  <div class="line"></div>
+
+  <p>
+    Experienced Senior Full Stack Java Developer and Android Developer specialized in
+    microservices, cloud-native architectures, and enterprise-grade mobile solutions.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section fade">
+  <h2 class="section-title">Skills</h2>
+  <div class="line"></div>
+
+  <div class="grid">
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"><p>Java</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"><p>Spring Boot</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"><p>Angular</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><p>React</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"><p>PostgreSQL</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"><p>MongoDB</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"><p>Kafka</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"><p>AWS</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"><p>Azure</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><p>Docker</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"><p>Kubernetes</p></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"><p>Jenkins</p></div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS PORTFOLIO -->
+<section id="certifications" class="section fade">
+  <h2 class="section-title">Certifications</h2>
+  <div class="line"></div>
+
+  <div class="portfolio-grid">
+
+    <!-- Badge 1 -->
+    <div class="badge-card">
+      <img src="https://images.credly.com/size/340x340/images/8dfc9e83-4e05-4fde-b9f6-67f63e1ed5b5/image.png">
+      <h3>Oracle Java SE 17 Developer</h3>
+      <p>Advanced Java programming certification.</p>
+      <button class="view-btn">See More</button>
+    </div>
+
+    <!-- Badge 2 -->
+    <div class="badge-card">
+      <img src="https://www.datocms-assets.com/2885/1713319236-resize_certified_associate-1.png">
+      <h3>Terraform Certified Associate</h3>
+      <p>Infrastructure automation with IaC.</p>
+      <button class="view-btn">See More</button>
+    </div>
+
+    <!-- Badge 3 -->
+    <div class="badge-card">
+      <img src="https://d1.awsstatic.com/certification/badges/AWS-Certified-Solutions-Architect-Associate_badge_300x300.c528e1bb85c94be63e7f239446f804c1f5f6d95a.png">
+      <h3>AWS Solutions Architect</h3>
+      <p>Cloud architecture, scaling & design.</p>
+      <button class="view-btn">See More</button>
+    </div>
+
+    <!-- Badge 4 -->
+    <div class="badge-card">
+      <img src="https://images.credly.com/size/340x340/images/e7e0f1b8-dac5-48f8-8a6b-964fba2f4b36/azure-ai-fundamentals-600x600.png">
+      <h3>Azure AI Fundamentals</h3>
+      <p>AI/ML fundamentals & Azure services.</p>
+      <button class="view-btn">See More</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section fade">
+  <h2 class="section-title">Experience</h2>
+  <div class="line"></div>
+
+  <div class="timeline">
+    <div class="item">
+      <span class="year-tag">2023</span>
+      <div class="tl-card">
+        <h3>Senior Developer – Southwest Airlines</h3>
+        <p>Enterprise microservices, AWS migration.</p>
       </div>
     </div>
-  </header>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid glass-card">
-      <span>Kotlin</span>
-      <span>Java</span>
-      <span>Spring Boot</span>
-      <span>Angular</span>
-      <span>GraphQL</span>
-      <span>Jetpack Compose</span>
-      <span>AWS</span>
-      <span>SQL</span>
-      <span>Microservices</span>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="glass-card project-card">
-        <h3>Citizens Bank</h3>
-        <p>Working on modernization of mobile banking applications, implementing secure and scalable backend services and UI flows.</p>
-      </div>
-      <div class="glass-card project-card">
-        <h3>Discovery</h3>
-        <p>Developed features for streaming services and optimized content delivery workflows.</p>
-      </div>
-      <div class="glass-card project-card">
-        <h3>McKesson</h3>
-        <p>Worked on enterprise healthcare logistics systems with an emphasis on security and reliability.</p>
-      </div>
-      <div class="glass-card project-card">
-        <h3>Western Alliance Bank</h3>
-        <p>Enhanced digital banking solutions with strong focus on performance and compliance.</p>
-      </div>
-      <div class="glass-card project-card">
-        <h3>Macy's</h3>
-        <p>Built retail application features supporting e-commerce and large-scale customer operations.</p>
+    <div class="item">
+      <span class="year-tag">2021</span>
+      <div class="tl-card">
+        <h3>Lead Android Developer – Sirius XM</h3>
+        <p>Jetpack Compose, MVI, Search module.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- TESTIMONIAL -->
+<section id="testimonial" class="section fade">
+  <h2 class="section-title">Testimonials</h2>
+  <div class="line"></div>
+
+  <div class="testimonial">
+    <p>“Bharath delivers enterprise-grade software with precision and consistency.”</p>
+    <p><strong>Josef Sharma</strong><br>CEO, Omtech</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section fade">
+  <h2 class="section-title">Contact</h2>
+  <div class="line"></div>
+
+  <div class="contact-box">📧 bharath.teja280@gmail.com</div>
+  <div class="contact-box">📍 USA</div>
+</section>
+
+<footer>Thanks for Scrolling 😊</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
