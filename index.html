@@ -1,68 +1,85 @@
-<section id="experience" class="section fade">
-  <h2 class="section-title">Experience</h2>
-  <div class="line"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharath Teja | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <div class="timeline">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+body{background:#1b1e23;color:#fff;overflow-x:hidden;}
 
-    <!-- Citizens Bank -->
-    <div class="exp-item" onclick="openExp(0)">
-      <div class="exp-year">2023</div>
-      <div class="exp-dot"></div>
-      <div class="exp-content">
-        <h3>Senior Full Stack Developer</h3>
-        <h4>Citizens Bank, Plano, TX</h4>
-        <p>Modernizing core banking, microservices, cloud, AI & GraphQL systems.</p>
-        <button class="exp-btn">See More</button>
-      </div>
-    </div>
+header{
+  position:fixed;top:0;width:100%;
+  background:rgba(20,20,20,0.75);
+  backdrop-filter:blur(8px);
+  padding:20px 50px;
+  display:flex;justify-content:space-between;
+  z-index:1000;
+}
+nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
 
-    <!-- Discovery -->
-    <div class="exp-item" onclick="openExp(1)">
-      <div class="exp-year">2021</div>
-      <div class="exp-dot"></div>
-      <div class="exp-content">
-        <h3>Senior Full Stack Developer</h3>
-        <h4>Discovery, Chicago, IL</h4>
-        <p>Built scalable streaming & content delivery systems.</p>
-        <button class="exp-btn">See More</button>
-      </div>
-    </div>
+.hero{
+  height:100vh;display:flex;
+  align-items:center;justify-content:space-between;
+  padding:0 60px;
+}
+.hero-text h1{font-size:50px;line-height:1.2;}
+.hero-text span{color:#ffbf00;}
+.hero img{width:420px;border-radius:15px;box-shadow:0 0 25px #000;}
 
-    <!-- McKesson -->
-    <div class="exp-item" onclick="openExp(2)">
-      <div class="exp-year">2018</div>
-      <div class="exp-dot"></div>
-      <div class="exp-content">
-        <h3>Java Full Stack Developer</h3>
-        <h4>McKesson, Irving, TX</h4>
-        <p>Healthcare systems, Spring Boot, WebFlux, Azure, Microservices.</p>
-        <button class="exp-btn">See More</button>
-      </div>
-    </div>
+.shape{position:absolute;border-radius:50%;background:#ffbf0033;filter:blur(60px);}
+.s1{width:320px;height:320px;top:12%;left:-5%;}
+.s2{width:260px;height:260px;bottom:8%;right:-5%;}
 
-    <!-- Western Alliance Bank -->
-    <div class="exp-item" onclick="openExp(3)">
-      <div class="exp-year">2016</div>
-      <div class="exp-dot"></div>
-      <div class="exp-content">
-        <h3>Java Developer</h3>
-        <h4>Western Alliance Bank, Phoenix, AZ</h4>
-        <p>Enterprise banking apps, Spring Boot, SQL Server, Kubernetes.</p>
-        <button class="exp-btn">See More</button>
-      </div>
-    </div>
+.section{padding:100px 60px;}
+.section-title{font-size:32px;margin-bottom:10px;}
+.line{width:60px;height:4px;background:#ffbf00;margin-bottom:30px;}
 
-    <!-- Macy’s -->
-    <div class="exp-item" onclick="openExp(4)">
-      <div class="exp-year">2014</div>
-      <div class="exp-dot"></div>
-      <div class="exp-content">
-        <h3>Java Developer</h3>
-        <h4>Macy’s, New York, NY</h4>
-        <p>E-commerce systems, Spring MVC, Oracle, Dojo, SOAP/REST.</p>
-        <button class="exp-btn">See More</button>
-      </div>
-    </div>
+.fade{opacity:0;transform:translateY(30px);transition:1s;}
+.fade.visible{opacity:1;transform:translateY(0);}
 
-  </div>
-</section>
+/* ⭐ 3D CERTIFICATION CARDS */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+.cert-card{
+  background:#262a31;
+  padding:25px;border-radius:15px;
+  text-align:center;
+  transition:transform .4s ease, box-shadow .4s ease;
+  transform-style:preserve-3d;
+  cursor:pointer;
+}
+.cert-card:hover{
+  transform:rotateY(10deg) rotateX(8deg) scale(1.03);
+  box-shadow:0 25px 60px rgba(0,0,0,0.5);
+}
+.cert-card img{
+  width:110px;height:110px;object-fit:contain;margin-bottom:15px;
+}
+.cert-card h3{font-size:18px;margin-bottom:10px;}
+.cert-card p{font-size:14px;opacity:.7;}
+
+/* MODAL */
+.modal{
+  position:fixed;top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.8);
+  display:none;align-items:center;justify-content:center;
+  z-index:2000;
+}
+.modal-content{
+  background:#262a31;
+  padding:30px;border-radius:15px;
+  max-width:600px;width:90%;text-align:center;
+}
+.close-btn{
+  background:#ffbf00;padding:10px 20px;border:none;
+  border-radius:6px;cursor:pointer;font-weight:600;
+}
+.close-btn:hover{background:#e6a900;}
