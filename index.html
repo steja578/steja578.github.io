@@ -83,6 +83,80 @@ nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
 .close-btn:hover{background:#e6a900;}
 
 /* EXPERIENCE TIMELINE */
+  /* ===== EXPERIENCE TIMELINE ===== */
+.timeline {
+  position: relative;
+  margin-top: 40px;
+  border-left: 2px solid #777;
+  padding-left: 40px;
+}
+
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-year {
+  position: absolute;
+  left: -95px;
+  top: 0;
+  background: #2e3238;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #ffbf00;
+  border-radius: 50%;
+  position: absolute;
+  left: -48px;
+  top: 6px;
+  animation: blink 1.4s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0% { box-shadow: 0 0 0px #ffbf00; opacity: 1; }
+  50% { box-shadow: 0 0 15px #ffbf00; opacity: 0.5; }
+  100% { box-shadow: 0 0 0px #ffbf00; opacity: 1; }
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.timeline-content h4 {
+  font-size: 15px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.exp-btn {
+  padding: 8px 14px;
+  background: #ffbf00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+}
+
+.exp-btn:hover {
+  background: #d9a500;
+}
+
 .timeline{
   margin-left:60px;
   border-left:2px solid #555;
@@ -214,63 +288,91 @@ nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
 
 <!-- EXPERIENCE -->
 <section id="experience" class="section fade">
-  <h2 class="section-title">Work-Life Chronicle</h2>
+  <h2 class="section-title">Experience</h2>
   <div class="line"></div>
 
   <div class="timeline">
 
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <span class="exp-year">2023 – Present</span>
-      <div class="exp-card">
-        <h3>Senior Full Stack Developer – Citizens Bank</h3>
-        <p>Core banking modernization using AI, microservices, cloud & GraphQL.</p>
-        <span class="see-more" onclick="openExp(0)">See More</span>
+    <!-- Citizens Bank -->
+    <div class="timeline-item">
+      <div class="timeline-year">2023</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Senior Java Full Stack Developer</h3>
+        <h4>Citizens Bank, Plano, TX</h4>
+        <p>
+          Led modernization of core banking systems using Java 17, Spring Boot, AWS, Kafka,
+          GraphQL, and Kubernetes. Built microservices, automated CI/CD, integrated AI/ML
+          capabilities, and delivered scalable cloud-native banking platforms.
+        </p>
+        <button class="exp-btn" onclick="openExpModal(0)">See More</button>
       </div>
     </div>
 
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <span class="exp-year">2021 – 2023</span>
-      <div class="exp-card">
-        <h3>Senior Java Full Stack Developer – Discovery</h3>
-        <p>Streaming platform engineering & real-time systems.</p>
-        <span class="see-more" onclick="openExp(1)">See More</span>
+    <!-- Discovery -->
+    <div class="timeline-item">
+      <div class="timeline-year">2021</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Senior Java Full Stack Developer</h3>
+        <h4>Discovery, Chicago, IL</h4>
+        <p>
+          Built scalable streaming and metadata systems using Java 14, Spring Boot, AWS,
+          Kafka, Angular, and GraphQL. Developed event-driven pipelines and optimized
+          cloud deployments.
+        </p>
+        <button class="exp-btn" onclick="openExpModal(1)">See More</button>
       </div>
     </div>
 
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <span class="exp-year">2018 – 2021</span>
-      <div class="exp-card">
-        <h3>Java Full Stack Developer – McKesson</h3>
-        <p>Healthcare automation & scalable services.</p>
-        <span class="see-more" onclick="openExp(2)">See More</span>
+    <!-- McKesson -->
+    <div class="timeline-item">
+      <div class="timeline-year">2018</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Java Full Stack Developer</h3>
+        <h4>McKesson, Irving, TX</h4>
+        <p>
+          Delivered healthcare inventory and pharmaceutical systems using Java 11,
+          Spring Boot, WebFlux, Azure, Kafka, React and PostgreSQL.
+        </p>
+        <button class="exp-btn" onclick="openExpModal(2)">See More</button>
       </div>
     </div>
 
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <span class="exp-year">2016 – 2018</span>
-      <div class="exp-card">
-        <h3>Java Developer – Western Alliance Bank</h3>
-        <p>Banking APIs & cloud transformation.</p>
-        <span class="see-more" onclick="openExp(3)">See More</span>
+    <!-- Western Alliance Bank -->
+    <div class="timeline-item">
+      <div class="timeline-year">2016</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Java Developer</h3>
+        <h4>Western Alliance Bank, Phoenix, AZ</h4>
+        <p>
+          Developed enterprise banking services using Java 8, Spring Boot, SQL Server, 
+          Azure, Kafka and Angular, ensuring high availability and secure deployments.
+        </p>
+        <button class="exp-btn" onclick="openExpModal(3)">See More</button>
       </div>
     </div>
 
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <span class="exp-year">2014 – 2016</span>
-      <div class="exp-card">
-        <h3>Java Developer – Macy’s</h3>
-        <p>Retail backend & REST APIs.</p>
-        <span class="see-more" onclick="openExp(4)">See More</span>
+    <!-- Macy’s -->
+    <div class="timeline-item">
+      <div class="timeline-year">2014</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Java Developer</h3>
+        <h4>Macy’s, New York, NY</h4>
+        <p>
+          Built retail backend + storefront applications using Java 6, Spring MVC, 
+          Oracle, SOAP, Bootstrap, AJAX and Selenium automation.
+        </p>
+        <button class="exp-btn" onclick="openExpModal(4)">See More</button>
       </div>
     </div>
 
   </div>
 </section>
+
 
 <!-- CONTACT -->
 <section id="contact" class="section fade">
@@ -343,21 +445,49 @@ function openCert(i){
 function closeCert(){document.getElementById("certModal").style.display="none";}
 
 /* EXPERIENCE DATA */
-const expData=[
-`Citizens Bank full description goes here (paste long block)…`,
-`Discovery full description goes here…`,
-`McKesson full description goes here…`,
-`Western Alliance full description…`,
-`Macy’s detailed description…`
+const expData = [
+  { title: "Citizens Bank – Senior Full Stack Developer", 
+    text: `Full SDLC modernization, Java 17, microservices, AWS, Kafka, GraphQL, MongoDB, CI/CD, 
+           AI/ML integrations, RAG pipelines, cloud-native deployments and banking automation.` },
+
+  { title: "Discovery – Senior Full Stack Developer",
+    text: `Streaming platforms, Java 14, Spring Boot, AWS, Kafka, Angular, GraphQL, 
+           distributed architectures, SSR, CI/CD, and real-time media processing systems.` },
+
+  { title: "McKesson – Java Full Stack Developer",
+    text: `Healthcare systems, Java 11, WebFlux, Azure, Kafka, React, PostgreSQL, 
+           order management, compliance automation, microservices and containerized deployments.` },
+
+  { title: "Western Alliance Bank – Java Developer",
+    text: `Java 8, Spring Boot, SQL Server, Azure cloud, microservices, asynchronous systems,
+           message-driven flows, API integrations and secure financial software engineering.` },
+
+  { title: "Macy’s – Java Developer",
+    text: `Java 6, Spring MVC, Oracle DB, SOAP services, Bootstrap UI, AJAX, performance tuning,
+           automation testing with Selenium, and retail enterprise systems.` }
 ];
 
-function openExp(i){
-  document.getElementById("exp-title").innerText="Experience Details";
-  document.getElementById("exp-text").innerText=expData[i];
-  document.getElementById("expModal").style.display="flex";
+function openExpModal(i){
+  document.getElementById("expTitle").innerText = expData[i].title;
+  document.getElementById("expDetails").innerText = expData[i].text;
+  document.getElementById("expModal").style.display = "flex";
 }
-function closeExp(){document.getElementById("expModal").style.display="none";}
+
+function closeExpModal() {
+  document.getElementById("expModal").style.display = "none";
+}
+
+  
 </script>
+  
+<!-- EXPERIENCE MODAL -->
+<div id="expModal" class="modal">
+  <div class="modal-content">
+      <h2 id="expTitle"></h2>
+      <p id="expDetails"></p>
+      <button class="close-btn" onclick="closeExpModal()">Close</button>
+  </div>
+</div>
 
 </body>
 </html>
