@@ -1,85 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bharath Teja | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Dan - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-text">D</span>
+                </div>
+                <nav class="nav">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search" class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
-body{background:#1b1e23;color:#fff;overflow-x:hidden;}
+    <div class="main-wrapper">
+        <!-- Left Column - Main Content -->
+        <div class="left-column">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="hero-prefix">I'M</span>
+                            <span class="hero-name">Ivan Dan</span>
+                        </h1>
+                        <p class="hero-subtitle">Python Developer & ERPNext Consultant</p>
+                        <button class="btn-contact">Contact Me</button>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="https://via.placeholder.com/400x500/333333/FFFFFF?text=Ivan+Dan" alt="Ivan Dan" class="hero-image">
+                        <div class="social-icons-vertical">
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-header{
-  position:fixed;top:0;width:100%;
-  background:rgba(20,20,20,0.75);
-  backdrop-filter:blur(8px);
-  padding:20px 50px;
-  display:flex;justify-content:space-between;
-  z-index:1000;
-}
-nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
+            <!-- About Section -->
+            <section id="about" class="section">
+                <h2 class="section-title">About</h2>
+                <p class="about-text">
+                    I have acquired and sharpened my skills in Python development and ERPNext consulting through years of dedicated practice and real-world experience. I am passionate about creating efficient, scalable solutions that drive business growth. My expertise spans across web development, database management, and enterprise resource planning systems. I am trustworthy, creative, and an effective communicator. I fondly anticipate working in a challenging yet rewarding organization to attain its visions for personal growth.
+                </p>
+            </section>
 
-.hero{
-  height:100vh;display:flex;
-  align-items:center;justify-content:space-between;
-  padding:0 60px;
-}
-.hero-text h1{font-size:50px;line-height:1.2;}
-.hero-text span{color:#ffbf00;}
-.hero img{width:420px;border-radius:15px;box-shadow:0 0 25px #000;}
+            <!-- My Skills Section -->
+            <section class="section">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-python skill-icon"></i>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-flutter skill-icon"></i>
+                        <span class="skill-name">Flutter</span>
+                    </div>
+                    <div class="skill-card active">
+                        <i class="fab fa-ubuntu skill-icon"></i>
+                        <span class="skill-name">Ubuntu</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-git-alt skill-icon"></i>
+                        <span class="skill-name">Git Source Control</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon"></i>
+                        <span class="skill-name">ERPNext</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-leaf skill-icon"></i>
+                        <span class="skill-name">MongoDB</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <span class="skill-name">HTML & CSS</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-js skill-icon"></i>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-code skill-icon"></i>
+                        <span class="skill-name">Frappe</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-microsoft skill-icon"></i>
+                        <span class="skill-name">.NET</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-flask skill-icon"></i>
+                        <span class="skill-name">Flask Microweb Framework</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon"></i>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-aws skill-icon"></i>
+                        <span class="skill-name">AWS Server</span>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-.shape{position:absolute;border-radius:50%;background:#ffbf0033;filter:blur(60px);}
-.s1{width:320px;height:320px;top:12%;left:-5%;}
-.s2{width:260px;height:260px;bottom:8%;right:-5%;}
+        <!-- Right Column - Sidebar -->
+        <div class="right-column">
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="section">
+                <h2 class="section-title">Portfolio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/300x200/4a5568/FFFFFF?text=Project+1" alt="Project 1">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/300x200/4a5568/FFFFFF?text=Amazon+Scraper" alt="Amazon Scraper">
+                        <div class="portfolio-overlay">
+                            <h3>Amazon Scraper</h3>
+                            <p>A simple blog which has user authentication such as Sign Up Sign in...</p>
+                            <button class="btn-view-more">View More</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/300x200/4a5568/FFFFFF?text=Project+3" alt="Project 3">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/300x200/4a5568/FFFFFF?text=Project+4" alt="Project 4">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/300x200/4a5568/FFFFFF?text=Project+5" alt="Project 5">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/300x200/4a5568/FFFFFF?text=Project+6" alt="Project 6">
+                    </div>
+                </div>
+                <button class="btn-view-more-center">View More</button>
+            </section>
 
-.section{padding:100px 60px;}
-.section-title{font-size:32px;margin-bottom:10px;}
-.line{width:60px;height:4px;background:#ffbf00;margin-bottom:30px;}
+            <!-- Experience Section -->
+            <section class="section">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2021</div>
+                            <h3 class="timeline-title">Senior Python Developer</h3>
+                            <p class="timeline-company">Scottech, Toledo</p>
+                            <p class="timeline-description">
+                                Led development of enterprise-level Python applications, mentored junior developers, and implemented best practices for code quality and performance optimization.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2021</div>
+                            <h3 class="timeline-title">Python Developer</h3>
+                            <p class="timeline-company">AutoGrid Systems, Naperville</p>
+                            <p class="timeline-description">
+                                Developed scalable web applications using Python and Flask, integrated third-party APIs, and maintained database systems for optimal performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-.fade{opacity:0;transform:translateY(30px);transition:1s;}
-.fade.visible{opacity:1;transform:translateY(0);}
+            <!-- Testimonial Section -->
+            <section class="section">
+                <h2 class="section-title">Testimonial</h2>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "The design quality, flexibility, documentation and support are all absolutely excellent. I buy the Avada theme for all my clients, knowing that whatever they require, Avada will be able to deliver."
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Josef Sharon</strong>
+                            <span>CEO, Omisoft</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-image">
+                        <img src="https://via.placeholder.com/150x150/FFD700/000000?text=JS" alt="Josef Sharon">
+                    </div>
+                </div>
+            </section>
 
-/* ⭐ 3D CERTIFICATION CARDS */
-.cert-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-  margin-top:40px;
-}
-.cert-card{
-  background:#262a31;
-  padding:25px;border-radius:15px;
-  text-align:center;
-  transition:transform .4s ease, box-shadow .4s ease;
-  transform-style:preserve-3d;
-  cursor:pointer;
-}
-.cert-card:hover{
-  transform:rotateY(10deg) rotateX(8deg) scale(1.03);
-  box-shadow:0 25px 60px rgba(0,0,0,0.5);
-}
-.cert-card img{
-  width:110px;height:110px;object-fit:contain;margin-bottom:15px;
-}
-.cert-card h3{font-size:18px;margin-bottom:10px;}
-.cert-card p{font-size:14px;opacity:.7;}
+            <!-- Contact Me Section -->
+            <section id="contact" class="section">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <span>ivandan@email.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <span>(201) 555-0124</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span>Toledo, United States</span>
+                    </div>
+                </div>
+                <div class="social-icons-horizontal">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </section>
+        </div>
+    </div>
 
-/* MODAL */
-.modal{
-  position:fixed;top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.8);
-  display:none;align-items:center;justify-content:center;
-  z-index:2000;
-}
-.modal-content{
-  background:#262a31;
-  padding:30px;border-radius:15px;
-  max-width:600px;width:90%;text-align:center;
-}
-.close-btn{
-  background:#ffbf00;padding:10px 20px;border:none;
-  border-radius:6px;cursor:pointer;font-weight:600;
-}
-.close-btn:hover{background:#e6a900;}
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Thanks for Scrolling</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
