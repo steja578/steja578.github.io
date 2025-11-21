@@ -10,28 +10,20 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
 body{background:#1b1e23;color:#fff;overflow-x:hidden;}
 
-header{
-  position:fixed;top:0;width:100%;
-  background:rgba(20,20,20,0.75);
-  backdrop-filter:blur(8px);
-  padding:20px 50px;
-  display:flex;justify-content:space-between;
-  z-index:1000;
-}
+/* HEADER */
+header{position:fixed;top:0;width:100%;background:rgba(20,20,20,0.85);
+backdrop-filter:blur(8px);padding:20px 50px;display:flex;
+justify-content:space-between;z-index:1000;}
 nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
 
-.hero{
-  height:100vh;display:flex;
-  align-items:center;justify-content:space-between;
-  padding:0 60px;
-}
+.hero{height:100vh;display:flex;align-items:center;justify-content:space-between;padding:0 60px;}
 .hero-text h1{font-size:50px;line-height:1.2;}
 .hero-text span{color:#ffbf00;}
-.hero img{width:420px;border-radius:15px;box-shadow:0 0 25px #000;}
+.hero img{width:420px;border-radius:15px;box-shadow:0 0 20px #000;}
 
-.shape{position:absolute;border-radius:50%;background:#ffbf0033;filter:blur(60px);}
-.s1{width:320px;height:320px;top:12%;left:-5%;}
-.s2{width:260px;height:260px;bottom:8%;right:-5%;}
+.shape{position:absolute;border-radius:50%;background:#ffbf0033;filter:blur(50px);} 
+.s1{width:300px;height:300px;top:10%;left:-5%;}
+.s2{width:250px;height:250px;bottom:5%;right:-5%;}
 
 .section{padding:100px 60px;}
 .section-title{font-size:32px;margin-bottom:10px;}
@@ -47,44 +39,50 @@ nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
   gap:30px;
   margin-top:40px;
 }
+
 .cert-card{
   background:#262a31;
-  padding:25px;border-radius:15px;
+  padding:25px;
+  border-radius:15px;
   text-align:center;
   transition:transform .4s ease, box-shadow .4s ease;
   transform-style:preserve-3d;
   cursor:pointer;
 }
+
 .cert-card:hover{
   transform:rotateY(10deg) rotateX(8deg) scale(1.03);
   box-shadow:0 25px 60px rgba(0,0,0,0.5);
 }
+
 .cert-card img{
   width:110px;height:110px;object-fit:contain;margin-bottom:15px;
 }
+
 .cert-card h3{font-size:18px;margin-bottom:10px;}
 .cert-card p{font-size:14px;opacity:.7;}
 
 /* MODAL */
 .modal{
-  position:fixed;top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.8);
-  display:none;align-items:center;justify-content:center;
-  z-index:2000;
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,.8);display:none;
+  align-items:center;justify-content:center;z-index:3000;
 }
+
 .modal-content{
-  background:#262a31;
-  padding:30px;border-radius:15px;
+  background:#262a31;padding:30px;border-radius:15px;
   max-width:600px;width:90%;text-align:center;
 }
+.modal-content h2{margin-bottom:10px;color:#ffbf00;}
+.modal-content p{opacity:.8;margin-bottom:20px;}
+
 .close-btn{
   background:#ffbf00;padding:10px 20px;border:none;
   border-radius:6px;cursor:pointer;font-weight:600;
 }
 .close-btn:hover{background:#e6a900;}
 
-    /* EXPERIENCE TIMELINE */
+/* EXPERIENCE TIMELINE */
 .timeline{
   margin-left:60px;
   border-left:2px solid #555;
@@ -96,19 +94,15 @@ nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
   position:relative;
 }
 .exp-dot{
-  width:18px;height:18px;
-  background:#ffbf00;border-radius:50%;
-  position:absolute;left:-50px;top:5px;
-  box-shadow:0 0 12px #ffbf00;
+  width:18px;height:18px;background:#ffbf00;border-radius:50%;
+  position:absolute;left:-50px;top:5px;box-shadow:0 0 12px #ffbf00;
 }
 .exp-year{
-  background:#444;padding:6px 14px;
-  border-radius:6px;font-size:15px;
-  margin-bottom:8px;display:inline-block;
+  background:#444;padding:6px 14px;border-radius:6px;
+  font-size:15px;margin-bottom:8px;display:inline-block;
 }
 .exp-card{
-  background:#262a31;padding:25px;
-  border-radius:12px;
+  background:#262a31;padding:25px;border-radius:12px;
 }
 .exp-card h3{margin-bottom:6px;color:#ffbf00;}
 .exp-card p{opacity:.8;font-size:14px;line-height:22px;}
@@ -119,8 +113,7 @@ nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
 
 /* EXPERIENCE MODAL */
 #expModal .modal-content{
-  max-width:800px;max-height:85vh;
-  overflow-y:auto;text-align:left;
+  max-width:900px;max-height:85vh;overflow-y:auto;text-align:left;
 }
 #expModal h2{color:#ffbf00;margin-bottom:10px;}
 #expModal p{margin-bottom:12px;opacity:.9;}
@@ -143,79 +136,141 @@ nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
   </nav>
 </header>
 
-<!-- EXPERIENCE SECTION -->
+<!-- HERO -->
+<section class="hero fade" id="home">
+  <div class="hero-text">
+    <h1>I'M <span>Bharath Teja</span></h1>
+    <p style="font-size:20px;opacity:.8;margin-top:10px;">
+      Senior Full Stack Java Developer
+    </p>
+    <a href="#contact" style="margin-top:20px;display:inline-block;
+      padding:10px 22px;border:2px solid #ffbf00;color:#ffbf00;
+      border-radius:6px;text-decoration:none;font-weight:500;">
+      Contact Me
+    </a>
+  </div>
+  <img src="https://avatars.githubusercontent.com/u/80447449?v=4" alt="Bharath Photo">
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section fade">
+  <h2 class="section-title">About Me</h2>
+  <div class="line"></div>
+  <p>Experienced Full Stack Java Developer specializing in enterprise cloud modernization, microservices, Kubernetes, DevOps automation, AI-driven systems, and high-availability distributed platforms.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section fade">
+  <h2 class="section-title">Skills</h2>
+  <div class="line"></div>
+  <p>Java • Spring Boot • Microservices • REST • GraphQL • Angular • React • AWS • GCP • Azure • Kubernetes • Terraform • Kafka • Docker • GitHub Actions • CI/CD</p>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs" class="section fade">
+  <h2 class="section-title">Certifications</h2>
+  <div class="line"></div>
+
+  <div class="cert-grid">
+
+    <div class="cert-card" onclick="openCert(0)">
+      <img src="https://miro.medium.com/1*xDeALYUHJdwtI9oBN-nuqg.png">
+      <h3>AWS Solutions Architect – Associate</h3>
+      <p>Designed scalable, secure AWS cloud architectures.</p>
+    </div>
+
+    <div class="cert-card" onclick="openCert(1)">
+      <img src="https://www.datocms-assets.com/2885/1713319236-resize_certified_associate-1.png">
+      <h3>Terraform Associate</h3>
+      <p>Infrastructure as Code for scalable automation.</p>
+    </div>
+
+    <div class="cert-card" onclick="openCert(2)">
+      <img src="https://miro.medium.com/1*meNIM7ngmoZwdzGXrtn-8g.jpeg">
+      <h3>Azure Developer Associate</h3>
+      <p>Azure cloud-native development & automation.</p>
+    </div>
+
+    <div class="cert-card" onclick="openCert(3)">
+      <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+      <h3>Java SE 11 Developer</h3>
+      <p>OOP, streams, modular architecture.</p>
+    </div>
+
+    <div class="cert-card" onclick="openCert(4)">
+      <img src="https://cdn.worldvectorlogo.com/logos/kubernetes-icon.svg">
+      <h3>Kubernetes CKA</h3>
+      <p>Cluster management & troubleshooting.</p>
+    </div>
+
+    <div class="cert-card" onclick="openCert(5)">
+      <img src="https://www.pngall.com/wp-content/uploads/13/Google-Cloud-Logo-PNG-Image-HD.png">
+      <h3>GCP Cloud Architect</h3>
+      <p>Scalable GCP solutions.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
 <section id="experience" class="section fade">
   <h2 class="section-title">Work-Life Chronicle</h2>
   <div class="line"></div>
 
   <div class="timeline">
 
-    <!-- Citizens Bank -->
     <div class="exp-item">
       <div class="exp-dot"></div>
       <span class="exp-year">2023 – Present</span>
       <div class="exp-card">
-        <h3>Senior Java Full Stack Developer – Citizens Bank, Plano, TX</h3>
-        <p>Core banking modernization, AI integration, microservices, SDLC leadership.</p>
+        <h3>Senior Full Stack Developer – Citizens Bank</h3>
+        <p>Core banking modernization using AI, microservices, cloud & GraphQL.</p>
         <span class="see-more" onclick="openExp(0)">See More</span>
       </div>
     </div>
 
-    <!-- Discovery -->
     <div class="exp-item">
       <div class="exp-dot"></div>
       <span class="exp-year">2021 – 2023</span>
       <div class="exp-card">
-        <h3>Senior Java Full Stack Developer – Discovery, Chicago, IL</h3>
-        <p>Streaming platform engineering, full-stack modernization, distributed systems.</p>
+        <h3>Senior Java Full Stack Developer – Discovery</h3>
+        <p>Streaming platform engineering & real-time systems.</p>
         <span class="see-more" onclick="openExp(1)">See More</span>
       </div>
     </div>
 
-    <!-- McKesson -->
     <div class="exp-item">
       <div class="exp-dot"></div>
       <span class="exp-year">2018 – 2021</span>
       <div class="exp-card">
-        <h3>Java Full Stack Developer – McKesson, Irving, TX</h3>
-        <p>Healthcare automation, secure integrations, scalable microservices.</p>
+        <h3>Java Full Stack Developer – McKesson</h3>
+        <p>Healthcare automation & scalable services.</p>
         <span class="see-more" onclick="openExp(2)">See More</span>
       </div>
     </div>
 
-    <!-- Western Alliance -->
     <div class="exp-item">
       <div class="exp-dot"></div>
       <span class="exp-year">2016 – 2018</span>
       <div class="exp-card">
-        <h3>Java Developer – Western Alliance Bank, Phoenix, AZ</h3>
-        <p>Banking services engineering, API modernization, cloud deployments.</p>
+        <h3>Java Developer – Western Alliance Bank</h3>
+        <p>Banking APIs & cloud transformation.</p>
         <span class="see-more" onclick="openExp(3)">See More</span>
       </div>
     </div>
 
-    <!-- Macy's -->
     <div class="exp-item">
       <div class="exp-dot"></div>
       <span class="exp-year">2014 – 2016</span>
       <div class="exp-card">
-        <h3>Java Developer – Macy's, New York, NY</h3>
-        <p>Retail backend development, REST APIs, automation & optimization.</p>
+        <h3>Java Developer – Macy’s</h3>
+        <p>Retail backend & REST APIs.</p>
         <span class="see-more" onclick="openExp(4)">See More</span>
       </div>
     </div>
 
   </div>
 </section>
-
-<!-- EXPERIENCE MODAL -->
-<div class="modal" id="expModal">
-  <div class="modal-content">
-    <h2 id="exp-title"></h2>
-    <p id="exp-text"></p>
-    <button class="close-btn" onclick="closeExp()">Close</button>
-  </div>
-</div>
 
 <!-- CONTACT -->
 <section id="contact" class="section fade">
@@ -225,9 +280,27 @@ nav a{margin:0 15px;color:#fff;text-decoration:none;font-weight:500;}
   <p>Location: USA</p>
 </section>
 
-<footer style="text-align:center;padding:30px;color:#aaa;margin-top:40px;border-top:1px solid #333;">
+<footer style="text-align:center;padding:30px;color:#aaa;margin-top:40px;
+border-top:1px solid #333;">
   © 2025 Bharath Teja • Portfolio
 </footer>
+
+<!-- MODALS -->
+<div class="modal" id="certModal">
+  <div class="modal-content">
+    <h2 id="cert-title"></h2>
+    <p id="cert-text"></p>
+    <button class="close-btn" onclick="closeCert()">Close</button>
+  </div>
+</div>
+
+<div class="modal" id="expModal">
+  <div class="modal-content">
+    <h2 id="exp-title"></h2>
+    <p id="exp-text"></p>
+    <button class="close-btn" onclick="closeExp()">Close</button>
+  </div>
+</div>
 
 <script>
 /* Fade In */
@@ -235,30 +308,48 @@ const fades=document.querySelectorAll('.fade');
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.2});
 fades.forEach(f=>obs.observe(f));
 
-/* CERTIFICATION MODAL LOGIC */
+/* CERTIFICATION DATA */
 const certData=[
-  {title:"AWS Solutions Architect – Associate", text:"Architect and deploy scalable AWS systems using EC2, Lambda, VPC, DynamoDB."},
-  {title:"Terraform Associate", text:"Build reusable IaC, manage state, automate cloud provisioning."},
-  {title:"Azure Developer Associate", text:"Azure Functions, AKS, CI/CD, serverless and secure API development."},
-  {title:"Java SE 11 Developer", text:"OOP, Streams, Lambdas, Generics, modular architecture."},
-  {title:"Kubernetes CKA", text:"Deploy and manage clusters, troubleshoot workloads, Helm, RBAC."},
-  {title:"GCP Cloud Architect", text:"Design scalable solutions using GKE, BigQuery, Compute Engine."}
+  {
+    title:"AWS Solutions Architect – Associate",
+    text:"Design high availability AWS systems using EC2, Lambda, API Gateway, IAM, VPC and DynamoDB."
+  },
+  {
+    title:"Terraform Associate",
+    text:"Infrastructure-as-Code expert managing reusable Terraform modules, state, automation and provisioning."
+  },
+  {
+    title:"Azure Developer Associate",
+    text:"Azure Functions, AKS, CI/CD, Serverless apps, API integration and cloud-native development."
+  },
+  {
+    title:"Java SE 11 Developer",
+    text:"Strong OOP, Streams API, Lambdas, Generics, Collections, Concurrency, Modular Architecture."
+  },
+  {
+    title:"Kubernetes CKA",
+    text:"Deploy, manage and troubleshoot Kubernetes clusters using RBAC, Helm, Ingress, Storage & Networking."
+  },
+  {
+    title:"GCP Cloud Architect",
+    text:"Design scalable GCP solutions using GKE, Cloud SQL, BigQuery, Pub/Sub and managed services."
+  }
 ];
 
-function openModal(i){
-  document.getElementById("modal-title").innerText = certData[i].title;
-  document.getElementById("modal-text").innerText = certData[i].text;
-  document.getElementById("modal").style.display="flex";
+function openCert(i){
+  document.getElementById("cert-title").innerText=certData[i].title;
+  document.getElementById("cert-text").innerText=certData[i].text;
+  document.getElementById("certModal").style.display="flex";
 }
-function closeModal(){document.getElementById("modal").style.display="none";}
+function closeCert(){document.getElementById("certModal").style.display="none";}
 
-/* EXPERIENCE FULL TEXT */
+/* EXPERIENCE DATA */
 const expData=[
-  `Spearheaded core banking modernization… (Citizens full description here).`,
-  `Full-stack engineering for streaming systems… (Discovery description).`,
-  `Developed healthcare automation systems… (McKesson description).`,
-  `Banking API modernization… (Western Alliance description).`,
-  `Retail backend + automation… (Macy’s full description).`
+`Citizens Bank full description goes here (paste long block)…`,
+`Discovery full description goes here…`,
+`McKesson full description goes here…`,
+`Western Alliance full description…`,
+`Macy’s detailed description…`
 ];
 
 function openExp(i){
@@ -271,4 +362,3 @@ function closeExp(){document.getElementById("expModal").style.display="none";}
 
 </body>
 </html>
-
